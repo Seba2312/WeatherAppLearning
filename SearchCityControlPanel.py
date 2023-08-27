@@ -53,10 +53,11 @@ class SearchCityControlPanel:
                     humidity = weather_data['current']['humidity']
                     condition = weather_data['current']['condition']['text']
                     air_quality_data = weather_data['current']['air_quality']
+                    country = weather_data['location']['country']
                     air_quality_rating = calculate_air_quality_rating(air_quality_data)
 
                     # Update Tkinter labels
-                    self.result_label.config(text=f"Search results for {correct_city_name}.")
+                    self.result_label.config(text=f"Search results for {correct_city_name}, {country}.")
                     self.error_label.config(
                         text=f"Wind Speed: {wind_speed_kph} kph\nTemperature: {temp_c}°C\nHumidity: {humidity}%\nCondition: {condition}\nAir Quality Rating: {air_quality_rating}")
                 else:

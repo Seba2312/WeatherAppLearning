@@ -24,14 +24,16 @@ try:
 
             # Assign ratings based on population ranges
             rating = 1  # Default rating for countries with unusual populations
-            if 5_000_000 <= population < 20_000_000:
+            if 1_000_000 <= population < 5_000_000:
                 rating = 3
+            elif 5_000_000 <= population < 20_000_000:
+                rating = 7
             elif 20_000_000 <= population < 50_000_000:
-                rating = 5
-            elif 50_000_000 <= population < 100_000_000:
                 rating = 10
-            elif 100_000_000 <= population <= 2_000_000_000:
+            elif 50_000_000 <= population < 100_000_000:
                 rating = 20
+            elif 100_000_000 <= population <= 2_000_000_000:
+                rating = 30
 
             # Remove spaces from country_name for Wolfram Language expression
             country_name_no_space = country_name.replace(" ", "")

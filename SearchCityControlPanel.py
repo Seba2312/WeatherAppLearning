@@ -95,7 +95,7 @@ def calculate_air_quality_rating( air_quality_data):
 
 # Your weather API function
 def fetch_weather(location):
-    url = "http://api.weatherapi.com/v1/current.json"
+    url = "http://api.weatherapi.com/v1/current.json" #https://www.weatherapi.com/my/  from here
     params = {
         "key": "8e3936c9bedd4e4a87c112506232508",  # Your API key
         "q": location,
